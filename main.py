@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     print("======1======")
     api_path = "/v1/search/integration/xyz/"
-    param = "?page_number=1&page_size=20&facet_filters=eyJoYXNfb3Blbl9ib3giOlsidHJ1ZSJdfQ==&sort=most_searched"
+    param = "?page_number=1&page_size=20&facet_filters=eyJoYXNfb3Blbl9ib3giOlsidHJ1ZSJdfQ==&sort=most_searched222222222"  # noqa
     notification_url1 = create_notification_endpoint(
         api_path=api_path,
         param=param,
@@ -76,7 +76,12 @@ if __name__ == "__main__":
     print(f"Notification URL1: {notification_url1}")
     print(f"Notification URL1 Length: {len(notification_url1)}")
     print(f"Hash ID: {hash_id1}")
-    print(f"Shortener object: {notification_object1}")
+    shorter1 = {
+        "hash_id": notification_object1[0],
+        "param": notification_object1[1],
+        "base_path": notification_object1[2],
+    }
+    print(f"Shortener object: {shorter1}")
 
     print("\n======2======")
     api_path = "/v1/pay/notify/"
@@ -92,7 +97,12 @@ if __name__ == "__main__":
     print(f"Notification URL2: {notification_url2}")
     print(f"Notification URL2 Length: {len(notification_url2)}")
     print(f"Hash ID: {hash_id2}")
-    print(f"Shortener object: {notification_object2}")
+    shorter2 = {
+        "hash_id": notification_object2[0],
+        "param": notification_object2[1],
+        "base_path": notification_object2[2],
+    }
+    print(f"Shortener object: {shorter2}")
 
     query_tables()
 
