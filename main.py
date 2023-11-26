@@ -63,8 +63,8 @@ if __name__ == "__main__":
     setup_database()
 
     print("======1======")
-    api_path = "/v1/pay/notify/"
-    param = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum."
+    api_path = "/v1/search/integration/xyz/"
+    param = "?page_number=1&page_size=20&facet_filters=eyJoYXNfb3Blbl9ib3giOlsidHJ1ZSJdfQ==&sort=most_searched"
     notification_url1 = create_notification_endpoint(
         api_path=api_path,
         param=param,
@@ -76,10 +76,10 @@ if __name__ == "__main__":
     print(f"Notification URL1: {notification_url1}")
     print(f"Notification URL1 Length: {len(notification_url1)}")
     print(f"Hash ID: {hash_id1}")
-    print(f"Notification Object: {notification_object1}")
+    print(f"Shortener object: {notification_object1}")
 
     print("\n======2======")
-    api_path = "/v1/payment/notification/webhook/"
+    api_path = "/v1/pay/notify/"
     param = "364ddde1-08e3-4ada-90a3-96c1d8dff601"
     notification_url2 = create_notification_endpoint(
         api_path=api_path,
@@ -92,7 +92,7 @@ if __name__ == "__main__":
     print(f"Notification URL2: {notification_url2}")
     print(f"Notification URL2 Length: {len(notification_url2)}")
     print(f"Hash ID: {hash_id2}")
-    print(f"Notification Object: {notification_object2}")
+    print(f"Shortener object: {notification_object2}")
 
     query_tables()
 
