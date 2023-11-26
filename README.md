@@ -12,6 +12,6 @@ Receiving post:
 - Redeem the corresponding Path from the db, additionally with prior params if applicable
 - Forwards to the destination service
 
-![image](https://github.com/VStahelin/endpoint-gen-strategy/assets/42194516/2718aab5-c2f3-44cf-9928-64328c5a145c)
+![image](https://github.com/VStahelin/endpoint-gen-strategy/assets/42194516/3fa4f7b1-af3d-45ff-85ac-94dbf31f5a0d)
 
 
