@@ -107,3 +107,14 @@ if __name__ == "__main__":
     query_tables()
 
     close_connection(connection)
+
+
+    def aa():
+        return [
+            {
+                "name": guest.full_name,
+                "age": guest.age,
+                "type": "child" if guest.is_child else "adult"
+            }
+            for guest in booking_containing_guests.guests.all()
+        ]
